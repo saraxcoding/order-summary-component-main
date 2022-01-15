@@ -1,5 +1,6 @@
 html {
     font-size: 16px;
+    background-color: #e0e8ff;
 }
 
 body {
@@ -16,13 +17,40 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
+    background-color: #fff;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 50% 80%;
 }
 
 h1 {
     font-weight: 900;
+    text-align: center;
+}
+
+.plan-section {
+    background-color: #f5f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 h2 {
+    font-size: 0.95em;
+    font-weight: 700;
+}
+
+.order-action h3 {
+    background-color: #3829e0;
+    color: #fff;
+    padding: 20px 40px;
+}
+
+.order-action p {
+    color: #7280a7;
     font-weight: 700;
 }
 
@@ -32,7 +60,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	flex-flow: row wrap;
+    flex-flow: column wrap;
 }
  
 @media all and (min-width:1440px) {
