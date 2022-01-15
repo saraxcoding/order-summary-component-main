@@ -5,62 +5,110 @@ html {
 
 body {
     font-family: 'Red Hat Display', sans-serif;
+    color: #7280a7;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1em;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #000;
+}
+
+a {
+    font-weight: 700;
 }
 
 .container {
+    border-radius: 10px;
     max-width: 375px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
-    background-color: #fff;
-}
-
-.main-image {
-    width: 100%;
-    border-radius: 50% 80%;
-}
-
-h1 {
-    font-weight: 900;
+    margin-top: 5rem;
     text-align: center;
 }
 
-.plan-section {
-    background-color: #f5f7ff;
+header, .summary-section, .order-action {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
 }
 
-h2 {
+header .main-image img {
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.75em;
+    margin-bottom: 0.5rem;
+}
+
+.summary-section p {
+    width: 70%;
+    line-height: 1.5em;
+}
+
+.plan-section {
+    width: 90%;
+    background-color: #f5f7ff;
+    border-radius: 10px;
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 20px 10px;
+}
+
+.plan-section h2 {
     font-size: 0.95em;
     font-weight: 700;
 }
 
-.order-action h3 {
+.order-action button {
+    width: 100%;
     background-color: #3829e0;
     color: #fff;
-    padding: 20px 40px;
+    margin-top: 2em;
+    border-radius: 10px;
+    padding: 20px 100px;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
 }
 
 .order-action p {
     color: #7280a7;
     font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
-.attribution {
+footer .attribution {
     text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
     flex-flow: column wrap;
+}
+
+footer .attribution h3 {
+    font-weight: 500;
 }
  
 @media all and (min-width:1440px) {
