@@ -1,6 +1,8 @@
 html {
     font-size: 16px;
     background-color: #e0e8ff;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -9,12 +11,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-size: 1em;
     text-align: center;
+    background: url("./images/pattern-background-mobile.svg") no-repeat var(--pale-blue);
 }
 
-h1, h2 {
-    color: #000;
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin-top: 40px;
 }
 
 a {
@@ -22,37 +28,37 @@ a {
 }
 
 .container {
-    border-radius: 10px;
+    border-radius: 30px;
     max-width: 375px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
     margin-top: 5rem;
+    padding-top: 10rem;
     text-align: center;
+    background-color: #fff;
 }
 
-header, .summary-section, .order-action {
+.container header, .summary-section, .order-action {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
 }
 
-header .main-image img {
-    border-radius: 30px 30px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    margin-bottom: 2rem;
+.main-image {
+    width: 100%;
+    height: 30%;
+    border-radius: 15px 15px 0 0;
 }
 
-header h1 {
+.container header h1 {
     font-weight: 900;
     text-align: center;
     font-size: 1.75em;
     margin-bottom: 0.5rem;
+    color: #1f2f56;
 }
 
 .summary-section p {
@@ -61,20 +67,28 @@ header h1 {
 }
 
 .plan-section {
-    width: 90%;
+    width: 85%;
     background-color: #f5f7ff;
     border-radius: 10px;
     margin-top: 1.5em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
-    padding: 20px 10px;
+    padding: 10px 0px;
 }
 
-.plan-section h2 {
+.plan-section p {
     font-size: 0.95em;
+}
+
+.plan-section strong {
     font-weight: 700;
+    color: #1f2f56;
+}
+
+.plan-section p, .plan-section .link {
+    width: 30%;
 }
 
 .order-action button {
@@ -83,35 +97,43 @@ header h1 {
     color: #fff;
     margin-top: 2em;
     border-radius: 10px;
-    padding: 20px 100px;
+    padding: 20px 80px;
     outline: none;
     border: none;
     font-size: 1em;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 700;
+    box-shadow: 0 1em 0.9em #e0e8ff;
 }
 
 .order-action p {
     color: #7280a7;
     font-weight: 700;
     margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
-footer .attribution {
-    text-align: center;
+/*footer .attribution {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-    flex-flow: column wrap;
 }
 
 footer .attribution h3 {
     font-weight: 500;
-}
+}*/
  
 @media all and (min-width:1440px) {
     /* Desktop styles here */
-	
+    body {
+        background: url("./images/pattern-background-desktop.svg") no-repeat var(--pale-blue);
+    }
+
+    .order-action p {
+        margin-bottom: 5rem;
+    }
+
+    .attribution {
+        margin-top: 10rem;
+    }
 }
