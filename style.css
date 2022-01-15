@@ -9,3 +9,33 @@ body {
     align-items: center;
     font-size: 1em;
 }
+
+.container {
+    max-width: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.attribution {
+    text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-flow: row wrap;
+}
+ 
+@media all and (min-width:1440px) {
+    /* Desktop styles here */
+	
+}
