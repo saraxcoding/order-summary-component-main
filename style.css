@@ -1,13 +1,29 @@
-html {
+/* GLOBAL STYLE */
+:root {
+    font-family: 'Red Hat Display', sans-serif; /* 500, 700, 900 weights */
     font-size: 16px;
-    background-color: #e0e8ff;
-    width: 100%;
-    height: 100%;
+    /* ### Primary */  
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /* ### Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --hover-blue: hsl(245, 73%, 65%);
+    --radius: 10px;
+    --transition: 0.18s ease;
 }
 
+html {
+    box-sizing: border-box;
+    color: var(--desaturated-blue);
+}
+
+/* MOBILE STYLE */
+
 body {
-    font-family: 'Red Hat Display', sans-serif;
-    color: #7280a7;
+    /*border: none;
+    padding: 0;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,125 +31,155 @@ body {
     font-size: 1em;
     text-align: center;
     background: url("./images/pattern-background-mobile.svg") no-repeat var(--pale-blue);
+    background-size: 100%;
 }
 
-.attribution {
-    position: absolute;
-    bottom: 0;
-    margin-top: 40px;
+/* MAIN SECTION */
+
+.card__container {
+    /*margin: 0 auto;*/
+    width: 23rem;
+    max-width: 90%;
+    height: 36rem;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    font-weight: 700;
-}
-
-.container {
-    border-radius: 30px;
-    max-width: 375px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    margin-top: 5rem;
-    padding-top: 10rem;
-    text-align: center;
-    background-color: #fff;
-}
-
-.container header, .summary-section, .order-action {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-}
-
-.main-image {
+.hero-image img {
     width: 100%;
     height: 30%;
-    border-radius: 15px 15px 0 0;
+    border-radius: 14px 14px 0 0;
 }
 
-.container header h1 {
-    font-weight: 900;
+.card__container h1 {
     text-align: center;
-    font-size: 1.75em;
-    margin-bottom: 0.5rem;
-    color: #1f2f56;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-top: 1.5rem;
+    padding: 0 1.8rem 1rem;
 }
 
-.summary-section p {
-    width: 70%;
+.card__container p.description {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
     line-height: 1.5em;
+    padding: 0 2rem;
+    color: var(--desaturated-blue);
+    margin-bottom: 1.5rem;
 }
+
+/* PLAN SECTION */ 
 
 .plan-section {
-    width: 85%;
-    background-color: #f5f7ff;
-    border-radius: 10px;
-    margin-top: 1.5em;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
     flex-flow: row wrap;
-    padding: 10px 0px;
-}
-
-.plan-section p {
-    font-size: 0.95em;
-}
-
-.plan-section strong {
-    font-weight: 700;
-    color: #1f2f56;
-}
-
-.plan-section p, .plan-section .link {
-    width: 30%;
-}
-
-.order-action button {
-    width: 100%;
-    background-color: #3829e0;
-    color: #fff;
-    margin-top: 2em;
+    background-color: var(--very-pale-blue);
     border-radius: 10px;
-    padding: 20px 80px;
-    outline: none;
-    border: none;
-    font-size: 1em;
-    font-family: 'Red Hat Display', sans-serif;
-    font-weight: 700;
-    box-shadow: 0 1em 0.9em #e0e8ff;
+    margin: auto;
+    width: 85%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
 }
 
-.order-action p {
-    color: #7280a7;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.plan-section .icon img {
+    height: 45px;
+    width: 45px;
+    margin-right: 5px;
 }
 
-/*footer .attribution {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-footer .attribution h3 {
+.plan-section .plan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    justify-content: center;
+    width: 55%;
+    font-size: 0.8rem;
     font-weight: 500;
-}*/
+}
+
+.plan-section .plan h2 {
+    font-size: 0.8rem;
+    color: var(--dark-blue);
+    margin-bottom: 0;
+}
+
+.plan-section .plan p {
+    color: var(--desaturated-blue);
+    margin-top: 0;
+}
+
+.plan-section .link a {
+    color: var(--bright-blue);
+    /*text-align: right;*/
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.plan-section .link a:hover {
+    text-decoration: none;
+    color: var(--hover-blue);
+}
+
+.card__container button {
+    display: block;
+    width: 85%;
+    margin: auto;
+    border: none;
+    background: none;
+    margin-top: 1.5rem; 
+    cursor: pointer;
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+.card__container button:hover {
+    color: var(--dark-blue);
+    transition: all 0.2s ease;
+}
+
+.card__container button:first-of-type {
+    color: white;
+    background-color: var(--bright-blue);
+    font-weight: 700;
+    padding: 0.85rem 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 15px 8px 2px var(--pale-blue);
+}
+
+.card__container button:first-of-type:hover {
+    background-color: var(--hover-blue);
+    transition: all 0.2s ease;
+}
+
+/* FOOTER */
+
+.attribution {
+    font-size: 0.625em;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
  
 @media all and (min-width:1440px) {
     /* Desktop styles here */
     body {
         background: url("./images/pattern-background-desktop.svg") no-repeat var(--pale-blue);
+        min-height: 100vh;
     }
 
-    .order-action p {
-        margin-bottom: 5rem;
-    }
-
-    .attribution {
+    /*.attribution {
         margin-top: 10rem;
-    }
+    }*/
 }
